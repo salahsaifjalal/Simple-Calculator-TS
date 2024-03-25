@@ -1,8 +1,8 @@
 {
-  "name": "simple-calculator-salahproject1",
   "version": "1.0.1",
   "description": "\"Simple Calculator Project1\"",
   "main": "index.js",
+  "name": "simple-calculator-salahproject1",
   "type": "module",
   "bin": "index.js",
   "scripts": {
