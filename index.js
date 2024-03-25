@@ -4,12 +4,12 @@ import inquirer from "inquirer";
 import chalk from "chalk";
 const answer = await inquirer.prompt([
     {
-        message: chalk.bold.bgGreenBright("Enter 1st Number here: "),
+        message: chalk.bold.bgGreenBright("Enter First Number here: "),
         type: "number",
         name: "firstNumber",
     },
     {
-        message: chalk.bold.bgYellowBright("Enter 2nd Number here: "),
+        message: chalk.bold.bgYellowBright("Enter Second Number here: "),
         type: "number",
         name: "secondNumber",
     },
@@ -20,7 +20,6 @@ const answer = await inquirer.prompt([
         choices: ["Addition", "Subtraction", "Multiplication", "Division", "Remainder"],
     },
 ]);
-//console.log(answer);
 if (answer.operator === "Addition") {
     console.log(chalk.bold.bgRedBright(`You perfromed Addition operation of ${answer.firstNumber} & ${answer.secondNumber} and 
       the result is: ${answer.firstNumber + answer.secondNumber} `));
