@@ -5,9 +5,8 @@ import chalk from "chalk";
 import systemSays from "say";
 systemSays.speak('This Calculator is made by Salahuddin Muhammad', undefined, undefined, (error_found) => {
     if (error_found) {
-        return console.log(error_found);
+        return console.error(error_found);
     }
-    // console.log('Text has been spoken.')
 });
 const answer = await inquirer.prompt([
     {
