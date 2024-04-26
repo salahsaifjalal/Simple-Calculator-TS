@@ -3,11 +3,14 @@
 import inquirer from "inquirer";
 import chalk from "chalk";
 import systemSays from "say";
-systemSays.speak('This Calculator is made by Salahuddin Muhammad', undefined, undefined, (error_found) => {
-    if (error_found) {
-        return console.error(error_found);
-    }
-});
+const myFunction = function () {
+    systemSays.speak('This Calculator is made by Salahuddin Muhammad', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
+};
+myFunction();
 const answer = await inquirer.prompt([
     {
         message: chalk.bold.bgGreenBright("Enter First Number here: "),
@@ -27,25 +30,56 @@ const answer = await inquirer.prompt([
     },
 ]);
 if (answer.operator === "Addition") {
+    //myFunction()
+    systemSays.speak('You perfromed Addition operation', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
     console.log(chalk.bold.bgRedBright(`You perfromed Addition operation of ${answer.firstNumber} & ${answer.secondNumber} and 
       the result is: ${answer.firstNumber + answer.secondNumber} `));
 }
 else if (answer.operator === "Subtraction") {
+    systemSays.speak('You perfromed Subtraction operation', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
     console.log(chalk.bold.bgRedBright(`You perfromed Subtraction operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber - answer.secondNumber} `));
 }
 else if (answer.operator === "Multiplication") {
+    systemSays.speak('You perfromed Multiplication operation', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
     console.log(chalk.bold.bgRedBright(`You perfromed Multiplication operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber * answer.secondNumber} `));
 }
 else if (answer.operator === "Division") {
+    systemSays.speak('You perfromed Division operation', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
     console.log(chalk.bold.bgRedBright(`You perfromed Division operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber / answer.secondNumber} `));
 }
 else if (answer.operator === "Remainder") {
+    systemSays.speak('You perfromed Remainder operation', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
     console.log(chalk.bold.bgRedBright(`You perfromed Remainder operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber % answer.secondNumber} `));
 }
 else {
+    systemSays.speak('Please select any valid operation', undefined, undefined, (error_found) => {
+        if (error_found) {
+            return console.error(error_found);
+        }
+    });
     console.log(chalk.bold.bgCyanBright("Please select any valid operation"));
 }
