@@ -7,13 +7,11 @@ import systemSays from "say";
 
 
 
-systemSays.speak('This Calculator is made by Salahuddin Muhammad', undefined, undefined, (error_found) => {
+systemSays.speak('This Calculator is made by Salahuddin Muhammad', 
+                    undefined, undefined, (error_found) => {
   if (error_found) {
-   return console.log(error_found)
-  }
- 
- // console.log('Text has been spoken.')
-});
+   return console.error(error_found)
+  }      });
 
 
 const answer = await inquirer.prompt([
