@@ -60,7 +60,6 @@ let askQuestion = async function () {
         },
     ]);
     if (answer.operator === "Addition") {
-        //myFunction()
         systemSays.speak(`You perfromed Addition operation of ${answer.firstNumber} & ${answer.secondNumber} and 
     the result is: ${answer.firstNumber + answer.secondNumber}`, undefined, undefined, (error_found) => {
             if (error_found) {
@@ -114,16 +113,3 @@ let askQuestion = async function () {
         console.log(chalk.bold.bgCyanBright("Please select any valid operation"));
     }
 };
-/*
-   mymain() {
-  //clear();
-  await calculatorImage ();
-}
-
-setTimeout(() => {
-}, timeout);
-//const myCalculator = new Calculator();
-mymain();
-
-//askQuestion();
-*/
