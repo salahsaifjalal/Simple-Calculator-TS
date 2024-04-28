@@ -5,7 +5,7 @@ import chalk from "chalk";
 import systemSays from "say";
 import mychalkanimation from "chalk-animation";
 
-let calculatorImage =  function () {
+let calculatorImage = function () {
   let animation = mychalkanimation.rainbow(
     `   
       Calculator Made by Salahuddin Muhammad
@@ -46,7 +46,6 @@ systemSays.speak(
 );
 
 let askQuestion = async function () {
-
   const answer = await inquirer.prompt([
     {
       message: chalk.bold.bgGreenBright("Enter First Number here: "),
@@ -76,8 +75,6 @@ let askQuestion = async function () {
   ]);
 
   if (answer.operator === "Addition") {
-    //myFunction()
-
     systemSays.speak(
       `You perfromed Addition operation of ${answer.firstNumber} & ${
         answer.secondNumber
@@ -192,16 +189,3 @@ let askQuestion = async function () {
     console.log(chalk.bold.bgCyanBright("Please select any valid operation"));
   }
 };
-/*
-   mymain() {
-  //clear();
-  await calculatorImage ();
-}
-
-setTimeout(() => {
-}, timeout);
-//const myCalculator = new Calculator();
-mymain();
-
-//askQuestion();
-*/
