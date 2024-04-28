@@ -37,17 +37,17 @@ systemSays.speak("This Calculator is made by Salahuddin Muhammad", undefined, 0.
 let askQuestion = async function () {
     const answer = await inquirer.prompt([
         {
-            message: chalk.bold.bgGreenBright("Enter First Number here: "),
+            message: chalk.bold.underline.greenBright("Enter First Number here: "),
             type: "number",
             name: "firstNumber",
         },
         {
-            message: chalk.bold.bgYellowBright("Enter Second Number here: "),
+            message: chalk.bold.underline.blueBright("Enter Second Number here: "),
             type: "number",
             name: "secondNumber",
         },
         {
-            message: chalk.bold.bgBlueBright("Select one of the operators to perform operation."),
+            message: chalk.bold.magentaBright("Select one of the operators to perform operation."),
             type: "list", //rawlist,checkbox
             name: "operator",
             choices: [
@@ -66,7 +66,7 @@ let askQuestion = async function () {
                 return console.error(error_found);
             }
         });
-        console.log(chalk.bold.bgRedBright(`You perfromed Addition operation of ${answer.firstNumber} & ${answer.secondNumber} and 
+        console.log(chalk.bold.redBright(`You perfromed Addition operation of ${answer.firstNumber} & ${answer.secondNumber} and 
       the result is: ${answer.firstNumber + answer.secondNumber} `));
     }
     else if (answer.operator === "Subtraction") {
@@ -75,7 +75,7 @@ let askQuestion = async function () {
             if (error_found) {
             }
         });
-        console.log(chalk.bold.bgRedBright(`You perfromed Subtraction operation of ${answer.firstNumber} & ${answer.secondNumber} and 
+        console.log(chalk.bold.redBright(`You perfromed Subtraction operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber - answer.secondNumber} `));
     }
     else if (answer.operator === "Multiplication") {
@@ -84,7 +84,7 @@ let askQuestion = async function () {
             if (error_found) {
             }
         });
-        console.log(chalk.bold.bgRedBright(`You perfromed Multiplication operation of ${answer.firstNumber} & ${answer.secondNumber} and 
+        console.log(chalk.bold.redBright(`You perfromed Multiplication operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber * answer.secondNumber} `));
     }
     else if (answer.operator === "Division") {
@@ -93,7 +93,7 @@ let askQuestion = async function () {
             if (error_found) {
             }
         });
-        console.log(chalk.bold.bgRedBright(`You perfromed Division operation of ${answer.firstNumber} & ${answer.secondNumber} and 
+        console.log(chalk.bold.redBright(`You perfromed Division operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber / answer.secondNumber} `));
     }
     else if (answer.operator === "Remainder") {
@@ -102,7 +102,7 @@ let askQuestion = async function () {
             if (error_found) {
             }
         });
-        console.log(chalk.bold.bgRedBright(`You perfromed Remainder operation of ${answer.firstNumber} & ${answer.secondNumber} and 
+        console.log(chalk.bold.redBright(`You perfromed Remainder operation of ${answer.firstNumber} & ${answer.secondNumber} and 
         the result is: ${answer.firstNumber % answer.secondNumber} `));
     }
     else {
