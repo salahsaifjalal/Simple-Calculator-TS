@@ -32,6 +32,18 @@ let calculatorImage = function () {
   }, 5000);
 };
 
+let quitMessage = function () {
+  let animation1 = mychalkanimation.neon(
+    `   
+    ♡ ♡ ♡ ♡ ♡ 
+    Bye Bye! See you next time! 
+   `, 1
+  );
+  setTimeout(() => {
+    animation1.stop();
+  }, 6000);
+};
+
 calculatorImage();
 
 systemSays.speak(
@@ -44,6 +56,7 @@ systemSays.speak(
     }
   }
 );
+
 
 let askQuestion = async function () {
   const answer = await inquirer.prompt([
@@ -70,11 +83,27 @@ let askQuestion = async function () {
         "Multiplication",
         "Division",
         "Remainder",
+        "Quit",
       ],
     },
   ]);
 
-  if (answer.operator === "Addition") {
+  if (answer.operator ==="Quit" ) {
+    systemSays.speak(
+      "Thank you my dear. See you next time",
+      undefined,
+      0.75,
+      (error_found) => {
+        if (error_found) {
+          return console.error(error_found);
+        }
+      }
+    );
+    quitMessage()
+    
+    
+  }
+  else if (answer.operator === "Addition") {
     systemSays.speak(
       `You perfromed Addition operation of ${answer.firstNumber} & ${
         answer.secondNumber
