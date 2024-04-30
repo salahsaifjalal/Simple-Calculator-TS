@@ -35,7 +35,7 @@ let quitMessage = function () {
    `, 1);
     setTimeout(() => {
         animation1.stop();
-    }, 8000);
+    }, 6000);
 };
 calculatorImage();
 systemSays.speak("This Calculator is made by Salahuddin Muhammad", undefined, 0.75, (error_found) => {
